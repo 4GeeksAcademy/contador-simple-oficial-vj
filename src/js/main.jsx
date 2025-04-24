@@ -10,9 +10,17 @@ import '../styles/index.css'
 
 // components
 import Home from './components/Home';
+import SecondsCounter from './components/SecondsCounter';
 
+
+
+let time = 0
+
+function contador(){
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>,
+<SecondsCounter seconds={time}/>
 )
+time++
+}
+
+setInterval(contador, 1000)
